@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header> 
+        <a href="index.html" class="btn" style="position:fixed; bottom:20px; right:20px;"> 
+            Go Back
+        </a>         
+        <img src="assets/logo.png">   <br>
+        <h1> Upload Your Video </h1>            
+    </header>
+
+    <div class="container">
+        <form action="https://formspree.io/f/mpzkzval" method="post" enctype="multipart/form-data">
+            <!-- @TODO: Put your code here -->
+            <div class="form-group">
+				<label for="title"><b>Title of video </b></label>
+								<div>
+									<input type="text" id="title" name="title" placeholder="Title of video" required/>
+								</div>
+						</div>
+          <!-- Description of video -->
+           <div>
+				<label for="description"><b>Description of Video </b></label>
+								<div>
+									<textarea rows="4" cols="50" class="input" id="description" name="description" placeholder="Description of video" required></textarea>
+								</div>
+						</div>
+          <!-- Date to publish video -->
+           <div>
+				<label  for="date_posted"><b>Date to Publish Video </b></label>
+								<div class="col-sm-10">
+									<input type="date" data-date-format="YYYY MM DD" class="form-control" id="date_posted" name="date_posted" required />
+								</div>
+						</div>
+          <!-- Video Thumbnail Photo -->
+           <div>
+			 <label for="video_thumbnail"><b>Video Thumbnail Photo </b></label>
+								<div>
+									<input name="Choose File" type="file" id="video_thumbnail"   accept="image/gif,image/png,image/jpeg">
+								</div>
+		  </div>
+            <button class="btn">Submit</button>
+        </form>        
+    </div>
+</body>
+</html>
